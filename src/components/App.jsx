@@ -18,7 +18,7 @@ export class App extends Component {
     if (savedState) this.setState({ contacts: JSON.parse(savedState) });
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(_, prevState) {
     const stateContacts = this.state.contacts;
 
     if (prevState.contacts.length !== stateContacts.length)
